@@ -11,7 +11,8 @@ import SwiftUI
 struct ZotConnectApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreenView()
+
         }
     }
 }

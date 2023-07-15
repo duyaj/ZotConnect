@@ -4,19 +4,21 @@
 //
 //  Created by Jonathan Duya on 7/15/23.
 //
-// Ok.
+//
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            Color.blue
+                .ignoresSafeArea()
+            Text("ContentView")
+                .foregroundColor(.white)
+                .font(.system(size: 30))
+                .bold()
+                .padding()
         }
-        .padding()
     }
 }
 
