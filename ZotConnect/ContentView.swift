@@ -4,7 +4,7 @@
 //
 //  Created by Jonathan Duya on 7/15/23.
 //
-// Ok
+// Ok.
 
 import SwiftUI
 
