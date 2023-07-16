@@ -10,14 +10,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            Color.blue
-                .ignoresSafeArea()
-            Text("ContentView")
-                .foregroundColor(.white)
-                .font(.system(size: 30))
-                .bold()
-                .padding()
+        TabView {
+            FeedView()
+                .tabItem {
+                    Image(systemName: "newspaper")
+                }
+            DiscoverView()
+                .tabItem {
+                    Image(systemName: "magnifyingglass")
+                }
+            EventsView()
+                .tabItem {
+                    Image(systemName: "calendar")
+                }
+            GroupsView()
+                .tabItem {
+                    Image(systemName: "person.3.fill")
+                }
+            SettingsView()
+                .tabItem {
+                    Image(systemName: "gear")
+                }
         }
     }
 }
