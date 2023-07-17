@@ -8,4 +8,12 @@
 import Foundation
 
 
-struct Org: 
+struct Org: Identifiable {
+    var id: String
+    var name: String
+    var type: String
+    var desc: String
+    var location: String
+    var memberNum: Int
+    var link: String
+}

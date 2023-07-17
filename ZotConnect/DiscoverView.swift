@@ -8,15 +8,21 @@
 import SwiftUI
 
 struct DiscoverView: View {
+    @ObservedObject var Orgs = OrgViewModel()
+    
+    init() {
+        Orgs.getOrgs()
+    }
+    
     var body: some View {
         NavigationView {
             VStack {
                 ScrollView {
                     LazyVStack {
-                        ForEach(0 ... 25, id: \.self) { _ in NavigationLink {
-                            GroupProfileView()
+                        ForEach(Orgs.orgList) {org in NavigationLink {
+                            GroupProfileView(name: org.name, type: org.type, local: org.location, link: org.link, memNum: org.memberNum)
                         } label: {
-                            DiscoverRowView()}
+                            DiscoverRowView(name: org.name, type: org.type)}
                         }
                     }
                 }

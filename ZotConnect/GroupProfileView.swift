@@ -8,6 +8,22 @@
 import SwiftUI
 
 struct GroupProfileView: View {
+    let name: String?
+    let type: String?
+    let desc: String?
+    let local: String?
+    let link: String?
+    let memNum: Int?
+    
+    init(name: String? = "name", type: String? = "type", desc: String? = "description", local: String? = "location", link: String? = "link", memNum: Int? = 0) {
+        self.name = name
+        self.type = type
+        self.desc = desc
+        self.local = local
+        self.link = link
+        self.memNum = memNum
+    }
+    
     @Environment(\.presentationMode) var mode
     var body: some View {
         VStack(alignment: .leading) {
@@ -29,6 +45,7 @@ struct GroupProfileView_Previews: PreviewProvider {
 }
 
 extension GroupProfileView {
+    
     
     var headerView: some View {
         ZStack(alignment: .bottomLeading) {
@@ -57,26 +74,26 @@ extension GroupProfileView {
     var groupInfoDetails: some View {
         VStack(alignment: .leading, spacing: 4) {
             HStack {
-                Text("VGDC at UCI")
+                Text(name!)
                     .font(.title2).bold()
             }
-            Text("Campus Organization")
+            Text(type!)
                 .font(.subheadline)
                 .foregroundColor(.gray)
             
-            Text("Video game design club!")
+            Text(desc!)
                 .font(.subheadline)
                 .padding(.vertical)
             
             HStack(spacing: 32) {
                 HStack {
                     Image(systemName: "mappin.and.ellipse")
-                    Text("PLSH 100")
+                    Text(local!)
                 }
                 
                 HStack {
                     Image(systemName: "link")
-                    Text("www.vgdcuci.com")
+                    Text(LocalizedStringKey(link!))
                 }
             }
             .font(.caption)
@@ -84,7 +101,7 @@ extension GroupProfileView {
             
             HStack(spacing: 24) {
                 HStack(spacing: 4) {
-                    Text("138")
+                    Text(String(memNum!))
                         .font(.subheadline)
                         .bold()
                     

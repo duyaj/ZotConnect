@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct DiscoverRowView: View {
+    let name: String?
+    let type: String?
+    
+    init(name: String? = "NO NAME", type: String? = "NO TYPE") {
+        self.name = name
+        self.type = type
+    }
+    
     var body: some View {
         HStack(spacing: 12) {
             Circle()
@@ -15,11 +23,11 @@ struct DiscoverRowView: View {
                 .foregroundColor(Color(.systemBlue))
             
             VStack(alignment: .leading, spacing: 4) {
-                Text("VGDC at UCI")
+                Text(self.name!)
                     .font(.subheadline).bold()
                     .foregroundColor(.black)
                 
-                Text("Campus Organization")
+                Text(self.type!)
                     .font(.subheadline)
                     .foregroundColor(.gray)
             }
