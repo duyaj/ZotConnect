@@ -9,7 +9,21 @@ import SwiftUI
 
 struct DiscoverView: View {
     var body: some View {
-        Text("Discover")
+        NavigationView {
+            VStack {
+                ScrollView {
+                    LazyVStack {
+                        ForEach(0 ... 25, id: \.self) { _ in NavigationLink {
+                            GroupProfileView()
+                        } label: {
+                            DiscoverRowView()}
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Discover")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 

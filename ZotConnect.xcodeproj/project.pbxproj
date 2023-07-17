@@ -13,6 +13,9 @@
 		4AD7B5572A637EC6003BD2EA /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7B5562A637EC6003BD2EA /* EventsView.swift */; };
 		4AD7B5592A637ED2003BD2EA /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7B5582A637ED2003BD2EA /* GroupsView.swift */; };
 		4AD7B55D2A637F7B003BD2EA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7B55C2A637F7B003BD2EA /* SettingsView.swift */; };
+		4AD7B55F2A644DF1003BD2EA /* FeedRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7B55E2A644DF1003BD2EA /* FeedRowView.swift */; };
+		4AD7B5612A6486D1003BD2EA /* DiscoverRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7B5602A6486D0003BD2EA /* DiscoverRowView.swift */; };
+		4AD7B5632A6489BF003BD2EA /* GroupProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7B5622A6489BF003BD2EA /* GroupProfileView.swift */; };
 		4AEBC8352A62F5EA0082475A /* ZotConnectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEBC8342A62F5EA0082475A /* ZotConnectApp.swift */; };
 		4AEBC8372A62F5EA0082475A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEBC8362A62F5EA0082475A /* ContentView.swift */; };
 		4AEBC8392A62F5ED0082475A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AEBC8382A62F5ED0082475A /* Assets.xcassets */; };
@@ -46,6 +49,9 @@
 		4AD7B5562A637EC6003BD2EA /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		4AD7B5582A637ED2003BD2EA /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
 		4AD7B55C2A637F7B003BD2EA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4AD7B55E2A644DF1003BD2EA /* FeedRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRowView.swift; sourceTree = "<group>"; };
+		4AD7B5602A6486D0003BD2EA /* DiscoverRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverRowView.swift; sourceTree = "<group>"; };
+		4AD7B5622A6489BF003BD2EA /* GroupProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProfileView.swift; sourceTree = "<group>"; };
 		4AEBC8312A62F5EA0082475A /* ZotConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZotConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEBC8342A62F5EA0082475A /* ZotConnectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotConnectApp.swift; sourceTree = "<group>"; };
 		4AEBC8362A62F5EA0082475A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,8 +115,11 @@
 				4AEBC8342A62F5EA0082475A /* ZotConnectApp.swift */,
 				4AEBC8362A62F5EA0082475A /* ContentView.swift */,
 				4AD7B5462A634B2A003BD2EA /* SplashScreenView.swift */,
+				4AD7B5622A6489BF003BD2EA /* GroupProfileView.swift */,
 				4AD7B54E2A637DD2003BD2EA /* FeedView.swift */,
+				4AD7B55E2A644DF1003BD2EA /* FeedRowView.swift */,
 				4AD7B5502A637E55003BD2EA /* DiscoverView.swift */,
+				4AD7B5602A6486D0003BD2EA /* DiscoverRowView.swift */,
 				4AD7B5562A637EC6003BD2EA /* EventsView.swift */,
 				4AD7B5582A637ED2003BD2EA /* GroupsView.swift */,
 				4AD7B55C2A637F7B003BD2EA /* SettingsView.swift */,
@@ -275,11 +284,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AD7B5612A6486D1003BD2EA /* DiscoverRowView.swift in Sources */,
+				4AD7B55F2A644DF1003BD2EA /* FeedRowView.swift in Sources */,
 				4AD7B54F2A637DD2003BD2EA /* FeedView.swift in Sources */,
 				4AD7B55D2A637F7B003BD2EA /* SettingsView.swift in Sources */,
 				4AEBC8372A62F5EA0082475A /* ContentView.swift in Sources */,
 				4AD7B5512A637E55003BD2EA /* DiscoverView.swift in Sources */,
 				4AEBC8352A62F5EA0082475A /* ZotConnectApp.swift in Sources */,
+				4AD7B5632A6489BF003BD2EA /* GroupProfileView.swift in Sources */,
 				4AD7B5472A634B2A003BD2EA /* SplashScreenView.swift in Sources */,
 				4AD7B5592A637ED2003BD2EA /* GroupsView.swift in Sources */,
 				4AD7B5572A637EC6003BD2EA /* EventsView.swift in Sources */,
