@@ -21,7 +21,9 @@ class OrgViewModel: ObservableObject {
             let lowercasedQuery = searchText.lowercased()
             return orgList.filter({
                 $0.name.lowercased().contains(lowercasedQuery) ||
-                $0.type.lowercased().contains(lowercasedQuery)
+                $0.type.lowercased().contains(lowercasedQuery) ||
+                $0.location.lowercased().contains(lowercasedQuery)
+                
             })
             
         }
