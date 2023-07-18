@@ -29,7 +29,7 @@ struct FeedRowView: View {
                             .font(.caption)
                     }
                     
-                    Text("I hate colin")
+                    Text("Can anyone give me a ride?")
                         .font(.subheadline)
                         .multilineTextAlignment(.leading)
                 }
