@@ -9,7 +9,6 @@ import SwiftUI
 
 struct DiscoverView: View {
     @ObservedObject var Orgs = OrgViewModel()
-    @State private var searchText = ""
     
     init() {
         Orgs.getOrgs()
@@ -18,7 +17,7 @@ struct DiscoverView: View {
     var body: some View {
         NavigationView {
             VStack {
-                SearchBarView(text: $searchText)
+                SearchBarView(text: $Orgs.searchText)
                     .padding()
                 ScrollView {
                     LazyVStack {

@@ -12,8 +12,18 @@ class OrgViewModel: ObservableObject {
     @Published var orgList = [Org]()
     @Published var searchText = ""
     
-    func getOrgs() {
+    var searchedOrgs: [Org] {
         
+        if searchText.isEmpty {
+            print("empty")
+            return [Org]()
+        }
+        else {
+            print("not empty")
+            return orgList
+        }
+    }
+    func getOrgs() {
         let db = Firestore.firestore()
         db.collection("orgs").getDocuments { snapshot, err in
             if err == nil {
