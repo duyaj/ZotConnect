@@ -1,5 +1,5 @@
 //
-//  OrgVIewModel.swift
+//  OrgViewModel.swift
 //  ZotConnect
 //
 //  Created by Colin O'Hare on 7/17/23.
@@ -39,4 +39,46 @@ class OrgViewModel: ObservableObject {
         
     }
     
+}
+
+
+//
+//  DiscoverViewModel.swift
+//  ZotConnect
+//
+//  Created by Jonathan Duya on 7/18/23.
+//
+
+import Foundation
+
+class DiscoverViewModel: ObservableObject {
+    @Published var orgs = [Organization]()
+    @Published var searchText = ""
+    
+    var searchableOrgs: [Organization] {
+        if searchText.isEmpty {
+            return orgs
+        } else {
+            let lowercasedQuery = searchText.lowercased()
+            
+            return orgs.filter({
+                $0.name.contains(lowercasedQuery) ||
+                $0.type..contains(lowercasedQuery)
+            })
+        }
+    }
+    
+    let service = OrganizationService()
+    
+    init() {
+        fetchOrgs()
+    }
+    
+    func fetchOrgs() {
+        service.fetchOrgs { orgs in
+            self.orgs = orgs
+            
+            print("DEBUG: Organizations \(orgs)")
+        }
+    }
 }

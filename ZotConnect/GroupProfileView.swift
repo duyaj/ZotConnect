@@ -11,15 +11,15 @@ struct GroupProfileView: View {
     let name: String?
     let type: String?
     let desc: String?
-    let local: String?
+    let location: String?
     let link: String?
     let memNum: Int?
     
-    init(name: String? = "name", type: String? = "type", desc: String? = "description", local: String? = "location", link: String? = "link", memNum: Int? = 0) {
+    init(name: String? = "name", type: String? = "type", desc: String? = "desc", location: String? = "location", link: String? = "link", memNum: Int? = 0) {
         self.name = name
         self.type = type
         self.desc = desc
-        self.local = local
+        self.location = location
         self.link = link
         self.memNum = memNum
     }
@@ -88,7 +88,7 @@ extension GroupProfileView {
             HStack(spacing: 32) {
                 HStack {
                     Image(systemName: "mappin.and.ellipse")
-                    Text(local!)
+                    Text(location!)
                 }
                 
                 HStack {

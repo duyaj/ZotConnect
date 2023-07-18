@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DiscoverView: View {
     @ObservedObject var Orgs = OrgViewModel()
+    @State private var searchText = ""
     
     init() {
         Orgs.getOrgs()
@@ -17,10 +18,12 @@ struct DiscoverView: View {
     var body: some View {
         NavigationView {
             VStack {
+                SearchBarView(text: $searchText)
+                    .padding()
                 ScrollView {
                     LazyVStack {
                         ForEach(Orgs.orgList) {org in NavigationLink {
-                            GroupProfileView(name: org.name, type: org.type, local: org.location, link: org.link, memNum: org.memberNum)
+                            GroupProfileView(name: org.name, type: org.type, desc: org.desc, location: org.location, link: org.link, memNum: org.memberNum)
                         } label: {
                             DiscoverRowView(name: org.name, type: org.type)}
                         }
