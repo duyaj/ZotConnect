@@ -21,7 +21,7 @@ struct DiscoverView: View {
                     .padding()
                 ScrollView {
                     LazyVStack {
-                        ForEach(Orgs.orgList) {org in NavigationLink {
+                        ForEach(Orgs.searchedOrgs) {org in NavigationLink {
                             GroupProfileView(name: org.name, type: org.type, desc: org.desc, location: org.location, link: org.link, memNum: org.memberNum)
                         } label: {
                             DiscoverRowView(name: org.name, type: org.type)}

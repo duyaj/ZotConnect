@@ -13,16 +13,20 @@ class OrgViewModel: ObservableObject {
     @Published var searchText = ""
     
     var searchedOrgs: [Org] {
-        
         if searchText.isEmpty {
-            print("empty")
-            return [Org]()
-        }
-        else {
-            print("not empty")
             return orgList
         }
+        else {
+            
+            let lowercasedQuery = searchText.lowercased()
+            return orgList.filter({
+                $0.name.lowercased().contains(lowercasedQuery) ||
+                $0.type.lowercased().contains(lowercasedQuery)
+            })
+            
+        }
     }
+    
     func getOrgs() {
         let db = Firestore.firestore()
         db.collection("orgs").getDocuments { snapshot, err in
@@ -49,31 +53,4 @@ class OrgViewModel: ObservableObject {
         }
         
     }
-    
-    //    var searchableOrgs: [Org] {
-    //        if searchText.isEmpty {
-    //            return orgList
-    //        } else {
-    //            let lowercasedQuery = searchText.lowercased()
-    //
-    //            return orgList.filter({
-    //                $0.name.contains(lowercasedQuery) ||
-    //                $0.type.contains(lowercasedQuery)
-    //            })
-    //        }
-    //    }
-    //
-    //    let service = getOrgs()
-    //
-    //    init() {
-    //        fetchOrgList()
-    //    }
-    //
-    //    func fetchOrgList() {
-    //        service.fetchOrgList { orgList in
-    //            self.orgList = orgList
-    //
-    //            print("DEBUG: Organizations \(orgList)")
-    //
-    //
 }
