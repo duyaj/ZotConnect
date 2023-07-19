@@ -16,4 +16,5 @@ struct Org: Identifiable {
     var location: String
     var memberNum: Int
     var link: String
+    var profile: String
 }

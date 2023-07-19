@@ -7,13 +7,16 @@
 
 import SwiftUI
 
+
 struct DiscoverRowView: View {
     let name: String?
     let type: String?
+    let profile: String?
     
-    init(name: String? = "NO NAME", type: String? = "NO TYPE") {
+    init(name: String? = "NO NAME", type: String? = "NO TYPE", profile: String? = "") {
         self.name = name
         self.type = type
+        self.profile = profile
     }
     
     func genColor() -> Color{
@@ -33,9 +36,17 @@ struct DiscoverRowView: View {
     
     var body: some View {
         HStack(spacing: 12) {
-            Circle()
-                .frame(width: 48, height: 48)
-                .foregroundColor(genColor())
+            AsyncImage(url: URL(string: "https://storage.googleapis.com/zotconnect-d3690.appspot.com/orgProfile/test.png"), content: { image in
+                
+                image.resizable()
+                
+                
+            }, placeholder: {
+                
+            })
+            .frame(width:48, height: 48)
+            .clipShape(Circle())
+            
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(self.name!)

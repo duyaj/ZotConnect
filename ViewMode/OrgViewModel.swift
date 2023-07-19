@@ -43,7 +43,8 @@ class OrgViewModel: ObservableObject {
                                        desc: org["desc"] as? String ?? "",
                                        location: org["location"] as? String ?? "",
                                        memberNum: org["num"] as? Int ?? 0,
-                                       link: org["link"] as? String ?? ""
+                                       link: org["link"] as? String ?? "",
+                                       profile: org["url"] as? String ?? ""
                             )
                         }
                     }

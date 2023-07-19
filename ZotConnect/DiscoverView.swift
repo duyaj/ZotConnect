@@ -24,7 +24,7 @@ struct DiscoverView: View {
                         ForEach(Orgs.searchedOrgs) {org in NavigationLink {
                             GroupProfileView(name: org.name, type: org.type, desc: org.desc, location: org.location, link: org.link, memNum: org.memberNum)
                         } label: {
-                            DiscoverRowView(name: org.name, type: org.type)}
+                            DiscoverRowView(name: org.name, type: org.type, profile: org.profile)}
                         }
                     }
                 }
