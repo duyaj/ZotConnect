@@ -10,16 +10,17 @@ import SwiftUI
 struct YourGroupsFeedView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 32) {
+            HStack(spacing: 24) {
                 ForEach(0 ... 10, id: \.self) { user in
                     VStack {
                         ZStack(alignment: .bottomTrailing) {
-                            Image(systemName: "person.circle.fill")
-                                .resizable()
-                                .frame(width: 64, height: 64)
+                            Circle()
+                                .frame(width: 72, height: 72)
+                                .foregroundColor(Color(.systemBlue))
+                                .frame(width: 72, height: 72)
                                 .foregroundColor(Color(.systemGray4))
                         }
-                        Text("Organization")
+                        Text("VGDC")
                             .font(.subheadline)
                             .foregroundColor(.gray)
                     }
