@@ -8,20 +8,11 @@
 import SwiftUI
 
 struct GroupProfileView: View {
-    let name: String?
-    let type: String?
-    let desc: String?
-    let location: String?
-    let link: String?
-    let memNum: Int?
     
-    init(name: String? = "name", type: String? = "type", desc: String? = "desc", location: String? = "location", link: String? = "link", memNum: Int? = 0) {
-        self.name = name
-        self.type = type
-        self.desc = desc
-        self.location = location
-        self.link = link
-        self.memNum = memNum
+    let org: Org
+    
+    init(org: Org) {
+        self.org = org
     }
     
     @Environment(\.presentationMode) var mode
@@ -40,7 +31,7 @@ struct GroupProfileView: View {
 
 struct GroupProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        GroupProfileView()
+        GroupProfileView(org: Org())
     }
 }
 
@@ -63,9 +54,19 @@ extension GroupProfileView {
                         .offset(x: 16, y: 12)
                 }
                 
-                Circle()
-                    .frame(width: 72, height: 72)
-                    .offset(x: 16, y: 24)
+                AsyncImage(url: URL(string: org.profile), content: { image in
+                    
+                    image.resizable()
+                    
+                    
+                    
+                    
+                }, placeholder: {
+                    
+                })
+                .frame(width:80, height: 80)
+                .clipShape(Circle())
+                .offset(x: 17, y: 25)
             }
         }
         .frame(height: 96)
@@ -74,26 +75,26 @@ extension GroupProfileView {
     var groupInfoDetails: some View {
         VStack(alignment: .leading, spacing: 4) {
             HStack {
-                Text(name!)
+                Text(org.name)
                     .font(.title2).bold()
             }
-            Text(type!)
+            Text(org.type)
                 .font(.subheadline)
                 .foregroundColor(.gray)
             
-            Text(desc!)
+            Text(org.desc)
                 .font(.subheadline)
                 .padding(.vertical)
             
             HStack(spacing: 32) {
                 HStack {
                     Image(systemName: "mappin.and.ellipse")
-                    Text(location!)
+                    Text(org.location)
                 }
                 
                 HStack {
                     Image(systemName: "link")
-                    Text(LocalizedStringKey(link!))
+                    Text(LocalizedStringKey(org.link))
                 }
             }
             .font(.caption)
@@ -101,7 +102,7 @@ extension GroupProfileView {
             
             HStack(spacing: 24) {
                 HStack(spacing: 4) {
-                    Text(String(memNum!))
+                    Text(String(org.memberNum))
                         .font(.subheadline)
                         .bold()
                     

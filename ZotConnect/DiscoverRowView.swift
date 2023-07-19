@@ -9,14 +9,10 @@ import SwiftUI
 
 
 struct DiscoverRowView: View {
-    let name: String?
-    let type: String?
-    let profile: String?
+    let org: Org
     
-    init(name: String? = "NO NAME", type: String? = "NO TYPE", profile: String? = "") {
-        self.name = name
-        self.type = type
-        self.profile = profile
+    init(org: Org) {
+        self.org = org
     }
     
     func genColor() -> Color{
@@ -36,7 +32,7 @@ struct DiscoverRowView: View {
     
     var body: some View {
         HStack(spacing: 12) {
-            AsyncImage(url: URL(string: "https://storage.googleapis.com/zotconnect-d3690.appspot.com/orgProfile/test.png"), content: { image in
+            AsyncImage(url: URL(string: org.profile), content: { image in
                 
                 image.resizable()
                 
@@ -49,11 +45,11 @@ struct DiscoverRowView: View {
             
             
             VStack(alignment: .leading, spacing: 4) {
-                Text(self.name!)
+                Text(org.name)
                     .font(.subheadline).bold()
                     .foregroundColor(.black)
                 
-                Text(self.type!)
+                Text(org.type)
                     .font(.subheadline)
                     .foregroundColor(.gray)
             }
@@ -67,7 +63,7 @@ struct DiscoverRowView: View {
 
 struct DiscoverRowView_Previews: PreviewProvider {
     static var previews: some View {
-        DiscoverRowView()
+        DiscoverRowView(org: Org())
     }
 }
 

@@ -9,12 +9,12 @@ import Foundation
 
 
 struct Org: Identifiable {
-    var id: String
-    var name: String
-    var type: String
-    var desc: String
-    var location: String
-    var memberNum: Int
-    var link: String
-    var profile: String
+    var id: String = ""
+    var name: String = "name"
+    var type: String = "type"
+    var desc: String = "description"
+    var location: String = "location"
+    var memberNum: Int = 0
+    var link: String = "link"
+    var profile: String = "https://storage.googleapis.com/zotconnect-d3690.appspot.com/orgProfile/test.png"
 }
