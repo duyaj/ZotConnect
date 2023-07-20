@@ -32,7 +32,7 @@ class OrgViewModel: ObservableObject {
     
     func getOrgs() {
         let db = Firestore.firestore()
-        db.collection("orgs").getDocuments { snapshot, err in
+        db.collection("orgs").order(by: "num", descending: true).getDocuments { snapshot, err in
             if err == nil {
                 // no error
                 if let snapshot = snapshot {

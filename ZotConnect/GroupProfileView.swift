@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct GroupProfileView: View {
-    
     let org: Org
+    @State private var selectedOption: PostFilterViewModel = .announcements
     
     init(org: Org) {
         self.org = org
@@ -18,12 +18,19 @@ struct GroupProfileView: View {
     @Environment(\.presentationMode) var mode
     var body: some View {
         VStack(alignment: .leading) {
+            
             headerView
             groupInfoDetails
-            
             .padding(.vertical)
             .padding(.vertical)
             .padding(.horizontal)
+            HStack {
+                ForEach(PostFilterViewModel.allCases, id: \.rawValue) { option in
+                    VStack {
+                        Text(option.title)
+                    }
+                }
+            }
             Spacer()
         }
     }
@@ -114,5 +121,8 @@ extension GroupProfileView {
             .padding(.vertical)
         }
     }
+    
 }
+
+    
 
