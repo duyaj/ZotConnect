@@ -22,7 +22,8 @@ class OrgViewModel: ObservableObject {
             return orgList.filter({
                 $0.name.lowercased().contains(lowercasedQuery) ||
                 $0.type.lowercased().contains(lowercasedQuery) ||
-                $0.location.lowercased().contains(lowercasedQuery)
+                $0.location.lowercased().contains(lowercasedQuery) ||
+                $0.desc.lowercased().contains(lowercasedQuery)
                 
             })
             
