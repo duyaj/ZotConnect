@@ -12,7 +12,6 @@ struct FeedView: View {
         NavigationStack {
             ScrollView {
                 YourGroupsFeedView()
-                FilterFeedView()
                 LazyVStack {
                     ForEach(0 ... 20, id: \.self) { _ in FeedRowView()
                             .padding()
