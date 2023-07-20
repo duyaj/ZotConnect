@@ -12,9 +12,11 @@ struct FeedView: View {
         NavigationStack {
             ScrollView {
                 YourGroupsFeedView()
+                    .padding(.bottom, 8)
                 LazyVStack {
                     ForEach(0 ... 20, id: \.self) { _ in FeedRowView()
-                            .padding()
+                            .padding(.bottom)
+                            .padding(.horizontal)
                     }
                 }
             }

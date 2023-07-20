@@ -13,9 +13,12 @@ struct FeedRowView: View {
             HStack(alignment: .top, spacing: 12) {
                 Circle()
                     .frame(width: 56, height: 56)
-                    .foregroundColor(Color(.systemBlue))
+                    .foregroundColor(Color(.systemGreen))
                 
                 VStack(alignment: .leading, spacing: 4) {
+                    Text("Video Game Development Club").foregroundColor(.white).padding(.horizontal, 8).font(.system(size: 14))
+                        .background(Capsule()
+                        .fill(.blue)).fixedSize()
                     HStack {
                         Text("Jonathan Duya")
                             .font(.subheadline).bold()
@@ -27,12 +30,15 @@ struct FeedRowView: View {
                         Text("2d")
                             .foregroundColor(.gray)
                             .font(.caption)
+                            .padding(.trailing, 6)
+                        
                     }
                     
                     Text("Can anyone give me a ride?")
                         .font(.subheadline)
                         .multilineTextAlignment(.leading)
                 }
+
             }
             
             HStack {
@@ -62,7 +68,7 @@ struct FeedRowView: View {
                         .font(.subheadline)
                 }
             }
-            .padding()
+            .padding(10)
             .foregroundColor(.gray)
             Divider()
         }
