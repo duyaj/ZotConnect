@@ -10,6 +10,7 @@
 		4A136DF32A67AB1400DA87B1 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136DF22A67AB1400DA87B1 /* UserProfileView.swift */; };
 		4A136DF72A6849D900DA87B1 /* YourGroupsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136DF62A6849D900DA87B1 /* YourGroupsFeedView.swift */; };
 		4A263CAD2A6A144900012E97 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A263CAC2A6A144900012E97 /* NewPostView.swift */; };
+		4A263CB32A6A2C3200012E97 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A263CB22A6A2C3200012E97 /* LoginView.swift */; };
 		4AD67EB92A66C6C0005AF37A /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD67EB82A66C6C0005AF37A /* SearchBarView.swift */; };
 		4AD7B5472A634B2A003BD2EA /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7B5462A634B2A003BD2EA /* SplashScreenView.swift */; };
 		4AD7B54F2A637DD2003BD2EA /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7B54E2A637DD2003BD2EA /* FeedView.swift */; };
@@ -55,6 +56,7 @@
 		4A136DF22A67AB1400DA87B1 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		4A136DF62A6849D900DA87B1 /* YourGroupsFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourGroupsFeedView.swift; sourceTree = "<group>"; };
 		4A263CAC2A6A144900012E97 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
+		4A263CB22A6A2C3200012E97 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4AD67EB82A66C6C0005AF37A /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		4AD7B5462A634B2A003BD2EA /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		4AD7B54E2A637DD2003BD2EA /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A263CAF2A6A291100012E97 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				4AD7B5562A637EC6003BD2EA /* EventsView.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		4A263CB02A6A293F00012E97 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				4AD7B5582A637ED2003BD2EA /* GroupsView.swift */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		4A263CB12A6A294A00012E97 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4AD7B55C2A637F7B003BD2EA /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		4AEBC8282A62F5EA0082475A = {
 			isa = PBXGroup;
 			children = (
@@ -133,15 +159,16 @@
 				4AEBC8342A62F5EA0082475A /* ZotConnectApp.swift */,
 				4AEBC8362A62F5EA0082475A /* ContentView.swift */,
 				4AD7B5462A634B2A003BD2EA /* SplashScreenView.swift */,
+				4A263CB22A6A2C3200012E97 /* LoginView.swift */,
 				4AD7B5622A6489BF003BD2EA /* GroupProfileView.swift */,
 				4A136DF22A67AB1400DA87B1 /* UserProfileView.swift */,
-				776049452A69B2F800D1AEC1 /* PostFilterViewModel.swift */,
 				776049442A69B20300D1AEC1 /* Feed */,
 				774B32AC2A65B168008281AB /* Models */,
 				776049432A69B1B800D1AEC1 /* Discover */,
-				4AD7B5562A637EC6003BD2EA /* EventsView.swift */,
-				4AD7B5582A637ED2003BD2EA /* GroupsView.swift */,
-				4AD7B55C2A637F7B003BD2EA /* SettingsView.swift */,
+				774B32AF2A65B343008281AB /* ViewModel */,
+				4A263CAF2A6A291100012E97 /* Events */,
+				4A263CB02A6A293F00012E97 /* Groups */,
+				4A263CB12A6A294A00012E97 /* Settings */,
 				777B6E392A65AFF3007ECF34 /* GoogleService-Info.plist */,
 				4AEBC8382A62F5ED0082475A /* Assets.xcassets */,
 				4AEBC83A2A62F5ED0082475A /* Preview Content */,
@@ -177,6 +204,7 @@
 		774B32AC2A65B168008281AB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				776049452A69B2F800D1AEC1 /* PostFilterViewModel.swift */,
 				774B32AD2A65B17C008281AB /* Org.swift */,
 			);
 			path = Models;
@@ -196,7 +224,6 @@
 				4AD67EB82A66C6C0005AF37A /* SearchBarView.swift */,
 				4AD7B5602A6486D0003BD2EA /* DiscoverRowView.swift */,
 				4AD7B5502A637E55003BD2EA /* DiscoverView.swift */,
-				774B32AF2A65B343008281AB /* ViewModel */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -365,6 +392,7 @@
 				4AD67EB92A66C6C0005AF37A /* SearchBarView.swift in Sources */,
 				4A136DF32A67AB1400DA87B1 /* UserProfileView.swift in Sources */,
 				4AD7B5472A634B2A003BD2EA /* SplashScreenView.swift in Sources */,
+				4A263CB32A6A2C3200012E97 /* LoginView.swift in Sources */,
 				4AD7B5592A637ED2003BD2EA /* GroupsView.swift in Sources */,
 				4AD7B5572A637EC6003BD2EA /* EventsView.swift in Sources */,
 			);
