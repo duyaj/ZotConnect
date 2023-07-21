@@ -9,7 +9,7 @@ import Foundation
 
 
 struct Org: Identifiable {
-    var id: String = ""
+    var id: String = "duya0A"
     var name: String = "name"
     var type: String = "type"
     var desc: String = "description"

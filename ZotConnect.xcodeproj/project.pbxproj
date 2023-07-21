@@ -29,6 +29,8 @@
 		4AEBC8522A62F5EE0082475A /* ZotConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEBC8512A62F5EE0082475A /* ZotConnectUITestsLaunchTests.swift */; };
 		773F8C3D2A6A36ED00F72171 /* OrgPostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F8C3C2A6A36ED00F72171 /* OrgPostService.swift */; };
 		773F8C3E2A6A377D00F72171 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776049472A69DA6D00D1AEC1 /* Post.swift */; };
+		773F8C422A6A3BA100F72171 /* GroupProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F8C412A6A3BA100F72171 /* GroupProfileViewModel.swift */; };
+		773F8C452A6A3D3F00F72171 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 773F8C442A6A3D3F00F72171 /* FirebaseFirestoreSwift */; };
 		774B32AE2A65B17C008281AB /* Org.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774B32AD2A65B17C008281AB /* Org.swift */; };
 		774B32B12A65B38F008281AB /* OrgViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774B32B02A65B38F008281AB /* OrgViewModel.swift */; };
 		776049462A69B2F800D1AEC1 /* PostFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776049452A69B2F800D1AEC1 /* PostFilterViewModel.swift */; };
@@ -79,6 +81,7 @@
 		4AEBC84F2A62F5EE0082475A /* ZotConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotConnectUITests.swift; sourceTree = "<group>"; };
 		4AEBC8512A62F5EE0082475A /* ZotConnectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotConnectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		773F8C3C2A6A36ED00F72171 /* OrgPostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgPostService.swift; sourceTree = "<group>"; };
+		773F8C412A6A3BA100F72171 /* GroupProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProfileViewModel.swift; sourceTree = "<group>"; };
 		774B32AD2A65B17C008281AB /* Org.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Org.swift; sourceTree = "<group>"; };
 		774B32B02A65B38F008281AB /* OrgViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgViewModel.swift; sourceTree = "<group>"; };
 		776049452A69B2F800D1AEC1 /* PostFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFilterViewModel.swift; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				777B6E3D2A65B021007ECF34 /* FirebaseFirestore in Frameworks */,
+				773F8C452A6A3D3F00F72171 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +147,7 @@
 				4AEBC8442A62F5ED0082475A /* ZotConnectTests */,
 				4AEBC84E2A62F5EE0082475A /* ZotConnectUITests */,
 				4AEBC8322A62F5EA0082475A /* Products */,
+				773F8C432A6A3D3F00F72171 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,17 +164,15 @@
 		4AEBC8332A62F5EA0082475A /* ZotConnect */ = {
 			isa = PBXGroup;
 			children = (
-				776049492A69DF0600D1AEC1 /* Services */,
+				773F8C3F2A6A3B7500F72171 /* GroupProfile */,
 				4AEBC8342A62F5EA0082475A /* ZotConnectApp.swift */,
 				4AEBC8362A62F5EA0082475A /* ContentView.swift */,
 				4AD7B5462A634B2A003BD2EA /* SplashScreenView.swift */,
 				4A263CB22A6A2C3200012E97 /* LoginView.swift */,
-				4AD7B5622A6489BF003BD2EA /* GroupProfileView.swift */,
 				4A136DF22A67AB1400DA87B1 /* UserProfileView.swift */,
 				776049442A69B20300D1AEC1 /* Feed */,
 				774B32AC2A65B168008281AB /* Models */,
 				776049432A69B1B800D1AEC1 /* Discover */,
-				774B32AF2A65B343008281AB /* ViewModel */,
 				4A263CAF2A6A291100012E97 /* Events */,
 				4A263CB02A6A293F00012E97 /* Groups */,
 				4A263CB12A6A294A00012E97 /* Settings */,
@@ -205,6 +208,31 @@
 			path = ZotConnectUITests;
 			sourceTree = "<group>";
 		};
+		773F8C3F2A6A3B7500F72171 /* GroupProfile */ = {
+			isa = PBXGroup;
+			children = (
+				773F8C402A6A3B9400F72171 /* ViewModel */,
+				776049492A69DF0600D1AEC1 /* Services */,
+				4AD7B5622A6489BF003BD2EA /* GroupProfileView.swift */,
+			);
+			path = GroupProfile;
+			sourceTree = "<group>";
+		};
+		773F8C402A6A3B9400F72171 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				773F8C412A6A3BA100F72171 /* GroupProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		773F8C432A6A3D3F00F72171 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		774B32AC2A65B168008281AB /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +254,7 @@
 		776049432A69B1B800D1AEC1 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				774B32AF2A65B343008281AB /* ViewModel */,
 				4AD67EB82A66C6C0005AF37A /* SearchBarView.swift */,
 				4AD7B5602A6486D0003BD2EA /* DiscoverRowView.swift */,
 				4AD7B5502A637E55003BD2EA /* DiscoverView.swift */,
@@ -270,6 +299,7 @@
 			name = ZotConnect;
 			packageProductDependencies = (
 				777B6E3C2A65B021007ECF34 /* FirebaseFirestore */,
+				773F8C442A6A3D3F00F72171 /* FirebaseFirestoreSwift */,
 			);
 			productName = ZotConnect;
 			productReference = 4AEBC8312A62F5EA0082475A /* ZotConnect.app */;
@@ -392,6 +422,7 @@
 				4AD7B5612A6486D1003BD2EA /* DiscoverRowView.swift in Sources */,
 				4A136DF72A6849D900DA87B1 /* YourGroupsFeedView.swift in Sources */,
 				4AD7B55F2A644DF1003BD2EA /* FeedRowView.swift in Sources */,
+				773F8C422A6A3BA100F72171 /* GroupProfileViewModel.swift in Sources */,
 				774B32B12A65B38F008281AB /* OrgViewModel.swift in Sources */,
 				4AD7B54F2A637DD2003BD2EA /* FeedView.swift in Sources */,
 				4AD7B55D2A637F7B003BD2EA /* SettingsView.swift in Sources */,
@@ -740,6 +771,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		773F8C442A6A3D3F00F72171 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 777B6E3B2A65B021007ECF34 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
 		777B6E3C2A65B021007ECF34 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 777B6E3B2A65B021007ECF34 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

@@ -12,6 +12,5 @@ struct Post: Identifiable, Decodable{
     let title: String
     let text: String
     let images: [String]?
-    let time: String
     
 }

@@ -10,11 +10,13 @@ import SwiftUI
 struct GroupProfileView: View {
     let org: Org
     
+    @ObservedObject var viewModel : GroupProfileViewModel
     @State private var selectedOption: PostType = .announcements
     @Namespace var animation
     
     init(org: Org) {
         self.org = org
+        self.viewModel = GroupProfileViewModel(org: org)
     }
     
     @Environment(\.presentationMode) var mode
@@ -25,31 +27,9 @@ struct GroupProfileView: View {
             groupInfoDetails
             .padding(.vertical)
             .padding(.horizontal)
-            HStack {
-                ForEach(PostType.allCases, id: \.rawValue) { option in
-                    VStack {
-                        Text(option.title)
-                            .fontWeight(selectedOption == option ? .semibold : .regular)
-                            .foregroundColor(selectedOption == option ? .black : .gray)
-                        if selectedOption == option {
-                            Capsule()
-                                .foregroundColor(Color(.systemBlue))
-                                .frame(height: 3)
-                                .matchedGeometryEffect(id: "filter", in: animation)
-                        }
-                        else {
-                            Capsule()
-                                .foregroundColor(Color(.clear))
-                                .frame(height: 3)
-                        }
-                    }
-                    .onTapGesture {
-                        withAnimation(.easeInOut) {
-                            self.selectedOption = option
-                        }
-                    }
-                }
-                Spacer()
+            postCategories
+            ForEach(viewModel.orgAnnouncements) { post in
+                Text(post.id)
             }
             Spacer()
         }
@@ -142,6 +122,34 @@ extension GroupProfileView {
         }
     }
     
+    var postCategories: some View {
+            HStack {
+                ForEach(PostType.allCases, id: \.rawValue) { option in
+                    VStack {
+                        Text(option.title)
+                            .fontWeight(selectedOption == option ? .semibold : .regular)
+                            .foregroundColor(selectedOption == option ? .black : .gray)
+                        if selectedOption == option {
+                            Capsule()
+                                .foregroundColor(Color(.systemBlue))
+                                .frame(height: 3)
+                                .matchedGeometryEffect(id: "filter", in: animation)
+                        }
+                        else {
+                            Capsule()
+                                .foregroundColor(Color(.clear))
+                                .frame(height: 3)
+                        }
+                    }
+                    .onTapGesture {
+                        withAnimation(.easeInOut) {
+                            self.selectedOption = option
+                        }
+                    }
+                }
+                Spacer()
+            }
+    }
 }
 
     
