@@ -9,11 +9,3 @@ import Foundation
 import Firebase
 
 
-struct OrgPostService {
-    
-    func retrievePost(org: Org, completion : @escaping([Post]) -> Void) {
-        let OrgAnnouncements = Firestore.firestore().collection("orgs/\(Org.id)/Announcement").getDocuments()
-        
-     
-    }
-}
