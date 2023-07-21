@@ -6,10 +6,15 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
+import Firebase
 
 struct Post: Identifiable, Decodable{
-    let id: String
+    @DocumentID var id: String?
     let title: String
     let text: String
+    let timestamp: Timestamp
+    let images: [String]
+    
     
 }

@@ -29,7 +29,7 @@ struct GroupProfileView: View {
             .padding(.horizontal)
             postCategories
             ForEach(viewModel.orgAnnouncements) { post in
-                Text(post.id)
+                Text(post.id!)
             }
             Spacer()
         }

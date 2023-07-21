@@ -12,7 +12,6 @@ import FirebaseFirestoreSwift
 struct orgPostService {
     
     func fetchOrgPosts(org: Org, completion: @escaping ([Post]) -> Void) {
-        print(org.id)
         let db = Firestore.firestore()
         db.collection("/orgs/\(org.id)/Announcement").getDocuments { snapshot, err in
             guard let docs = snapshot?.documents else {return}
