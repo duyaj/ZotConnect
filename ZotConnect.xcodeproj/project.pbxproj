@@ -27,6 +27,8 @@
 		4AEBC8462A62F5ED0082475A /* ZotConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEBC8452A62F5ED0082475A /* ZotConnectTests.swift */; };
 		4AEBC8502A62F5EE0082475A /* ZotConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEBC84F2A62F5EE0082475A /* ZotConnectUITests.swift */; };
 		4AEBC8522A62F5EE0082475A /* ZotConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEBC8512A62F5EE0082475A /* ZotConnectUITestsLaunchTests.swift */; };
+		773F8C3D2A6A36ED00F72171 /* OrgPostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F8C3C2A6A36ED00F72171 /* OrgPostService.swift */; };
+		773F8C3E2A6A377D00F72171 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776049472A69DA6D00D1AEC1 /* Post.swift */; };
 		774B32AE2A65B17C008281AB /* Org.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774B32AD2A65B17C008281AB /* Org.swift */; };
 		774B32B12A65B38F008281AB /* OrgViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774B32B02A65B38F008281AB /* OrgViewModel.swift */; };
 		776049462A69B2F800D1AEC1 /* PostFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776049452A69B2F800D1AEC1 /* PostFilterViewModel.swift */; };
@@ -76,6 +78,7 @@
 		4AEBC84B2A62F5EE0082475A /* ZotConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZotConnectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AEBC84F2A62F5EE0082475A /* ZotConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotConnectUITests.swift; sourceTree = "<group>"; };
 		4AEBC8512A62F5EE0082475A /* ZotConnectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZotConnectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		773F8C3C2A6A36ED00F72171 /* OrgPostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgPostService.swift; sourceTree = "<group>"; };
 		774B32AD2A65B17C008281AB /* Org.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Org.swift; sourceTree = "<group>"; };
 		774B32B02A65B38F008281AB /* OrgViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgViewModel.swift; sourceTree = "<group>"; };
 		776049452A69B2F800D1AEC1 /* PostFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFilterViewModel.swift; sourceTree = "<group>"; };
@@ -205,9 +208,9 @@
 		774B32AC2A65B168008281AB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				776049472A69DA6D00D1AEC1 /* Post.swift */,
 				776049452A69B2F800D1AEC1 /* PostFilterViewModel.swift */,
 				774B32AD2A65B17C008281AB /* Org.swift */,
-				776049472A69DA6D00D1AEC1 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 		776049492A69DF0600D1AEC1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				773F8C3C2A6A36ED00F72171 /* OrgPostService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -393,6 +397,7 @@
 				4AD7B55D2A637F7B003BD2EA /* SettingsView.swift in Sources */,
 				4AEBC8372A62F5EA0082475A /* ContentView.swift in Sources */,
 				4AD7B5512A637E55003BD2EA /* DiscoverView.swift in Sources */,
+				773F8C3D2A6A36ED00F72171 /* OrgPostService.swift in Sources */,
 				776049462A69B2F800D1AEC1 /* PostFilterViewModel.swift in Sources */,
 				4A263CAD2A6A144900012E97 /* NewPostView.swift in Sources */,
 				4AEBC8352A62F5EA0082475A /* ZotConnectApp.swift in Sources */,
@@ -403,6 +408,7 @@
 				4AD7B5472A634B2A003BD2EA /* SplashScreenView.swift in Sources */,
 				4AD7B5592A637ED2003BD2EA /* GroupsView.swift in Sources */,
 				4AD7B5572A637EC6003BD2EA /* EventsView.swift in Sources */,
+				773F8C3E2A6A377D00F72171 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

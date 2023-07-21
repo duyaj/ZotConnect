@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct Post: Identifiable, Decodable {
-    let id: String?
-    let title: String?
-    let text: String?
+struct Post: Identifiable, Decodable{
+    let id: String
+    let title: String
+    let text: String
     let images: [String]?
-    let time: String?
+    let time: String
+    
 }
