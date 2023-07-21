@@ -9,7 +9,9 @@ import SwiftUI
 
 struct GroupProfileView: View {
     let org: Org
-    @State private var selectedOption: PostFilterViewModel = .announcements
+    
+    @State private var selectedOption: PostType = .announcements
+    @Namespace var animation
     
     init(org: Org) {
         self.org = org
@@ -22,14 +24,32 @@ struct GroupProfileView: View {
             headerView
             groupInfoDetails
             .padding(.vertical)
-            .padding(.vertical)
             .padding(.horizontal)
             HStack {
-                ForEach(PostFilterViewModel.allCases, id: \.rawValue) { option in
+                ForEach(PostType.allCases, id: \.rawValue) { option in
                     VStack {
                         Text(option.title)
+                            .fontWeight(selectedOption == option ? .semibold : .regular)
+                            .foregroundColor(selectedOption == option ? .black : .gray)
+                        if selectedOption == option {
+                            Capsule()
+                                .foregroundColor(Color(.systemBlue))
+                                .frame(height: 3)
+                                .matchedGeometryEffect(id: "filter", in: animation)
+                        }
+                        else {
+                            Capsule()
+                                .foregroundColor(Color(.clear))
+                                .frame(height: 3)
+                        }
+                    }
+                    .onTapGesture {
+                        withAnimation(.easeInOut) {
+                            self.selectedOption = option
+                        }
                     }
                 }
+                Spacer()
             }
             Spacer()
         }

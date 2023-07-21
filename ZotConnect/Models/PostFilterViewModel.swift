@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum PostFilterViewModel: Int, CaseIterable{
+enum PostType : Int, CaseIterable{
     case announcements
     case community
     
@@ -18,3 +18,4 @@ enum PostFilterViewModel: Int, CaseIterable{
         }
     }
 }
+
