@@ -18,7 +18,7 @@ struct FeedRowView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Video Game Development Club").foregroundColor(.white).padding(.horizontal, 8).font(.system(size: 14))
                         .background(Capsule()
-                        .fill(.blue)).fixedSize()
+                        .fill(.red)).fixedSize()
                     HStack {
                         Text("Jonathan Duya")
                             .font(.subheadline).bold()

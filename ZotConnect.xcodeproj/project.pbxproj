@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4A136DF32A67AB1400DA87B1 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136DF22A67AB1400DA87B1 /* UserProfileView.swift */; };
 		4A136DF72A6849D900DA87B1 /* YourGroupsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A136DF62A6849D900DA87B1 /* YourGroupsFeedView.swift */; };
+		4A263CAD2A6A144900012E97 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A263CAC2A6A144900012E97 /* NewPostView.swift */; };
 		4AD67EB92A66C6C0005AF37A /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD67EB82A66C6C0005AF37A /* SearchBarView.swift */; };
 		4AD7B5472A634B2A003BD2EA /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7B5462A634B2A003BD2EA /* SplashScreenView.swift */; };
 		4AD7B54F2A637DD2003BD2EA /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7B54E2A637DD2003BD2EA /* FeedView.swift */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		4A136DF22A67AB1400DA87B1 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		4A136DF62A6849D900DA87B1 /* YourGroupsFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourGroupsFeedView.swift; sourceTree = "<group>"; };
+		4A263CAC2A6A144900012E97 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 		4AD67EB82A66C6C0005AF37A /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		4AD7B5462A634B2A003BD2EA /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		4AD7B54E2A637DD2003BD2EA /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				4AD7B54E2A637DD2003BD2EA /* FeedView.swift */,
 				4AD7B55E2A644DF1003BD2EA /* FeedRowView.swift */,
 				4A136DF62A6849D900DA87B1 /* YourGroupsFeedView.swift */,
+				4A263CAC2A6A144900012E97 /* NewPostView.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				4AEBC8372A62F5EA0082475A /* ContentView.swift in Sources */,
 				4AD7B5512A637E55003BD2EA /* DiscoverView.swift in Sources */,
 				776049462A69B2F800D1AEC1 /* PostFilterViewModel.swift in Sources */,
+				4A263CAD2A6A144900012E97 /* NewPostView.swift in Sources */,
 				4AEBC8352A62F5EA0082475A /* ZotConnectApp.swift in Sources */,
 				4AD7B5632A6489BF003BD2EA /* GroupProfileView.swift in Sources */,
 				774B32AE2A65B17C008281AB /* Org.swift in Sources */,

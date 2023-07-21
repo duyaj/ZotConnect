@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FeedView: View {
     var body: some View {
-        NavigationStack {
+        ZStack(alignment: .bottomTrailing) {
             ScrollView {
                 YourGroupsFeedView()
                     .padding(.bottom, 8)
@@ -20,6 +20,20 @@ struct FeedView: View {
                     }
                 }
             }
+            
+            Button {
+                //
+            } label: {
+                Image(systemName: "square.and.pencil")
+                    .resizable()
+                    .renderingMode(.template)
+                    .frame(width: 28, height: 28)
+                    .padding()
+            }
+            .background(Color(.systemBlue))
+            .foregroundColor(.white)
+            .clipShape(Circle())
+            .padding()
         }
     }
 }

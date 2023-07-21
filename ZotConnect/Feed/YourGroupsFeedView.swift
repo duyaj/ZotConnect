@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct YourGroupsFeedView: View {
+    @ObservedObject var Orgs = OrgViewModel()
+    
+    init() {
+        Orgs.getOrgs()
+    }
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 18) {

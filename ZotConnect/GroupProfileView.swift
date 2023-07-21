@@ -58,7 +58,7 @@ extension GroupProfileView {
                         .resizable()
                         .frame(width: 20, height: 16)
                         .foregroundColor(.white)
-                        .offset(x: 16, y: 12)
+                        .offset(y: 12)
                 }
                 
                 AsyncImage(url: URL(string: org.profile), content: { image in
