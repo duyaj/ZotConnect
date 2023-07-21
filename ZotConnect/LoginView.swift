@@ -9,25 +9,22 @@ import SwiftUI
 
 struct LoginView: View {
     var body: some View {
-           VStack {
-               Spacer()
-               
-               Button(action: {
-                   //
-               }) {
-                   Text("Sign in with UCI")
-                       .foregroundColor(.white)
-                       .font(.headline)
-                       .padding()
-                       .background(Color.blue)
-                       .cornerRadius(8)
-               }
-               
-               Spacer()
-           }
-           .padding()
-       }
-   }
+            VStack {
+                Text("Welcome to My App!")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .padding()
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(
+                Image("ZotSplash")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .edgesIgnoringSafeArea(.all)
+            )
+        }
+    }
+
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
