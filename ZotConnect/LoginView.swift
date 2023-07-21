@@ -17,14 +17,13 @@ struct LoginView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(
-                Image("ZotSplash")
+                Image("Background")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .edgesIgnoringSafeArea(.all)
             )
         }
     }
-
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
